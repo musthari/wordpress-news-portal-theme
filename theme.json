@@ -4,14 +4,7 @@
   "settings": {
     "appearanceTools": true,
     "spacing": {
-      "units": [
-        "%",
-        "px",
-        "em",
-        "rem",
-        "vh",
-        "vw"
-      ],
+      "units": [ "%", "px", "em", "rem", "vh", "vw" ],
       "padding": true,
       "margin": true,
       "blockGap": true
@@ -46,16 +39,6 @@
         { "slug": "body", "name": "Inter", "fontFamily": "\"Inter\", Arial, sans-serif" },
         { "slug": "heading", "name": "Merriweather", "fontFamily": "\"Merriweather\", Georgia, serif" }
       ]
-    },
-    "blocks": {
-      "core/button": {
-        "border": {
-          "radius": true
-        },
-        "typography": {
-          "fontWeight": "700"
-        }
-      }
     }
   },
   "styles": {
@@ -65,17 +48,12 @@
     },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--body)",
-      "fontSize": "var(--wp--preset--font-size--medium)",
       "lineHeight": "1.7"
     },
     "elements": {
       "link": {
-        "color": {
-          "text": "var(--wp--preset--color--primary)"
-        },
-        "typography": {
-          "textDecoration": "none"
-        }
+        "color": { "text": "var(--wp--preset--color--primary)" },
+        "typography": { "textDecoration": "none" }
       },
       "h1": {
         "typography": {
