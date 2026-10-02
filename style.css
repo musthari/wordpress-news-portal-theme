@@ -1,0 +1,230 @@
+/*
+Theme Name: News Portal
+Theme URI: https://github.com/musthari/wordpress-news-portal-theme
+Author: Musthari
+Author URI: https://github.com/musthari
+Description: Fast, modern, and professional Full Site Editing theme for news and editorial websites.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.6
+Requires PHP: 7.4
+Text Domain: news-portal
+Tags: full-site-editing, blog, news, editorial, custom-logo, featured-images, block-patterns
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap');
+
+:root {
+  --wp--preset--color--base: #f8fafc;
+  --wp--preset--color--background: #f8fafc;
+  --wp--preset--color--foreground: #0f172a;
+  --wp--preset--color--text: #334155;
+  --wp--preset--color--primary: #dc2626;
+  --wp--preset--color--secondary: #e2e8f0;
+  --wp--preset--color--heading: #0f172a;
+  --wp--preset--font-family--body: "Inter", Arial, sans-serif;
+  --wp--preset--font-family--heading: "Merriweather", Georgia, serif;
+  --news-portal-border: 1px solid rgba(15, 23, 42, 0.08);
+  --news-portal-shadow: 0 18px 38px rgba(15, 23, 42, 0.06);
+  --news-portal-radius: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--wp--preset--color--background);
+  color: var(--wp--preset--color--text);
+  font-family: var(--wp--preset--font-family--body);
+  line-height: 1.7;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--wp--preset--font-family--body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.wp-block-post-title,
+.wp-block-heading {
+  font-family: var(--wp--preset--font-family--heading);
+  color: var(--wp--preset--color--heading);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+p {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wp-block-site-title a,
+.wp-block-post-title a,
+.wp-block-navigation-item a,
+.wp-block-columns a {
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+}
+
+.news-portal-header {
+  border-bottom: var(--news-portal-border);
+  background: rgba(248, 250, 252, 0.96);
+}
+
+.news-portal-header .wp-block-navigation__container {
+  gap: 1.5rem;
+}
+
+.news-portal-header .wp-block-navigation-item__content {
+  font-weight: 600;
+  color: var(--wp--preset--color--heading);
+}
+
+.news-portal-header .wp-block-search__input {
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  min-height: 42px;
+}
+
+.news-portal-hero,
+.news-portal-category-grid,
+.news-portal-latest-list {
+  margin-top: 0;
+}
+
+.news-portal-hero .wp-block-post-featured-image img,
+.news-portal-latest-list .wp-block-post-featured-image img {
+  border-radius: 18px;
+  box-shadow: var(--news-portal-shadow);
+}
+
+.news-portal-hero .wp-block-post-title,
+.news-portal-category-grid .wp-block-post-title,
+.news-portal-latest-list .wp-block-post-title {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.news-portal-hero .wp-block-post-excerpt p,
+.news-portal-latest-list .wp-block-post-excerpt p,
+.news-portal-latest-list .wp-block-post-content p {
+  color: var(--wp--preset--color--text);
+  margin: 0;
+}
+
+.news-portal-hero .wp-block-post {
+  border: var(--news-portal-border);
+  border-radius: var(--news-portal-radius);
+  background: #fff;
+  padding: 1rem;
+  box-shadow: var(--news-portal-shadow);
+}
+
+.news-portal-card {
+  background: #fff;
+  border: var(--news-portal-border);
+  border-radius: var(--news-portal-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-portal-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
+}
+
+.news-portal-card .wp-block-post-featured-image img {
+  width: 100%;
+  display: block;
+}
+
+.news-portal-card .wp-block-post-title {
+  font-size: clamp(1.15rem, 1.1vw + 0.85rem, 1.75rem);
+}
+
+.news-portal-category-grid .wp-block-post-template {
+  gap: 1.25rem !important;
+}
+
+.news-portal-category-grid .wp-block-post {
+  border: var(--news-portal-border);
+  border-radius: var(--news-portal-radius);
+  background: #fff;
+  padding: 1rem;
+  box-shadow: var(--news-portal-shadow);
+}
+
+.news-portal-ad-slot {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.08), rgba(15, 23, 42, 0.04));
+  border: 1px dashed rgba(220, 38, 38, 0.25);
+  border-radius: 18px;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wp--preset--color--foreground);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.wp-block-query .wp-block-post-template.is-layout-grid {
+  gap: 1.5rem;
+}
+
+.wp-block-button__link,
+.wp-block-button .wp-block-button__link {
+  background-color: var(--wp--preset--color--primary) !important;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.8rem 1.4rem;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  border-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--primary);
+  background: transparent;
+}
+
+.wp-block-group.is-layout-constrained,
+.wp-block-group .wp-block-group__inner-container {
+  max-width: 1200px;
+}
+
+@media (max-width: 782px) {
+  .news-portal-header .wp-block-columns {
+    gap: 1rem;
+  }
+
+  .news-portal-card,
+  .news-portal-hero .wp-block-post,
+  .news-portal-category-grid .wp-block-post {
+    padding: 0.85rem;
+  }
+
+  .news-portal-ad-slot {
+    min-height: 160px;
+  }
+}
